@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb38df6fe58e0b48b57a2665610a962, type: 3}
+  m_Name: c1
+  m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Data.CitizenSO
+  citizenName: Mumna Thornwick
+  age: 34
+  citizenType: 0
+  certifiedClass: 2
+  actualClass: 3
+  isForged: 1
+  storyHint: '"My sister used to work at the Dragon Registry... before the fire.'
+  openAIPersonality: '"Nervous man hiding his true dragon power level. Born with
+    Class 4 abilities but forged documents claiming Class 3 to avoid government suppression.
+    Fidgets with papers. Speaks quickly when lying about his power."'
+  portraitKey: citizen_mumna_01
+  portrait: {fileID: 0}
