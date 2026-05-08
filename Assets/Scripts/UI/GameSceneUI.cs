@@ -27,5 +27,47 @@ namespace DragonSeal.UI
         [SerializeField] private Button approveButton;
         [SerializeField] private Button rejectButton;
         [SerializeField] private Button flagButton;
+
+        private void Start()
+        {
+            approveButton.onClick.AddListener(() =>
+                InspectionManager.Instance.MakeDecision(InspectionManager.StampDecision.Approve));
+            rejectButton.onClick.AddListener(() =>
+                InspectionManager.Instance.MakeDecision(InspectionManager.StampDecision.Reject));
+            flagButton.onClick.AddListener(() =>
+                InspectionManager.Instance.MakeDecision(InspectionManager.StampDecision.Flag));
+
+            talkButton.onClick.AddListener(OnTalkClicked);
+
+            InspectionManager.Instance.OnCitizenArrived += UpdateCitizenUI;
+            InspectionManager.Instance.OnDecisionMade += OnDecisionMade;
+
+            UpdateDayAndTrust();
+        }
+
+        private void OnDestroy()
+        {
+            if (InspectionManager.Instance != null)
+            {
+                InspectionManager.Instance.OnCitizenArrived -= UpdateCitizenUI;
+                InspectionManager.Instance.OnDecisionMade -= OnDecisionMade;
+            }
+        }
+
+        private void OnTalkClicked()
+        {
+        }
+
+        private void UpdateCitizenUI(CitizenSO citizen)
+        {
+        }
+
+        private void OnDecisionMade(InspectionManager.StampDecision decision)
+        {
+        }
+
+        private void UpdateDayAndTrust()
+        {
+        }
     }
 }
