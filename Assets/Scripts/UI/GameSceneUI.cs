@@ -56,18 +56,48 @@ namespace DragonSeal.UI
 
         private void OnTalkClicked()
         {
+            CitizenSO current = InspectionManager.Instance.GetCurrentCitizen();
+            if (current == null) return;
+
+            // use OpenAI in a bit later
+            citizenDialogueText.text = string.IsNullOrEmpty(current.storyHint)
+                ? "I just want to get this over with...duh"
+                : current.storyHint;
         }
 
         private void UpdateCitizenUI(CitizenSO citizen)
         {
+            citizenNameText.text = citizen.citizenName;
+            citizenDialogueText.text = "...";
+
+            // Show port
+            if (citizen.portrait != null)
+                citizenPortrait.sprite = citizen.portrait;
+
+            // doc 
+            docNameText.text = $"Name: {citizen.citizenName}";
+            docClassText.text = $"Certified Class: {citizen.certifiedClass}";
+            docForgedText.text = citizen.isForged ? " DISCREPANCY DETECTED" : " Documents Valid";
+            docForgedText.color = citizen.isForged ? Color.red : Color.green;
+
+            // scanner reading
+            scannerResultText.text = $"Scanner: {citizen.actualClass}";
+            bool mismatch = citizen.certifiedClass != citizen.actualClass;
+            scannerDisplay.color = mismatch ? Color.red : Color.green;
+
+            UpdateDayAndTrust();
         }
 
         private void OnDecisionMade(InspectionManager.StampDecision decision)
         {
+            UpdateDayAndTrust();
         }
 
         private void UpdateDayAndTrust()
         {
+            if (GameManager.Instance == null) return;
+            trustText.text = $"TRUST: {GameManager.Instance.TrustRating}";
+            dayText.text = $"DAY {GameManager.Instance.DayNumber}";
         }
     }
 }
