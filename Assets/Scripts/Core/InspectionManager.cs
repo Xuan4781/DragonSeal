@@ -79,6 +79,15 @@ namespace DragonSeal.Core
         {
             if (_currentCitizen == null) return;
 
+            if (_currentCitizen.citizenType == CitizenType.Story &&
+                GameManager.Instance.DayNumber == 3)
+            {
+                
+                GameManager.Instance.CurrentEnding = decision == StampDecision.Flag
+                    ? GameManager.EndingType.ExposedTruth
+                    : GameManager.EndingType.StayedSilent;
+            }
+
             bool correct = IsDecisionCorrect(decision);
 
             switch (decision)
