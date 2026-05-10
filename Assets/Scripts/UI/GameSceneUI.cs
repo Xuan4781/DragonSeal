@@ -59,11 +59,16 @@ namespace DragonSeal.UI
             CitizenSO current = InspectionManager.Instance.GetCurrentCitizen();
             if (current == null) return;
 
-            // use OpenAI in a bit later
-            citizenDialogueText.text = string.IsNullOrEmpty(current.storyHint)
-                ? "I just want to get this over with...duh"
-                : current.storyHint;
+            citizenDialogueText.text = "...";
+            talkButton.interactable = false;
+
+            OpenAIService.Instance.GetCitizenDialogue(current, (dialogue) =>
+            {
+                citizenDialogueText.text = dialogue;
+                talkButton.interactable = true;
+            });
         }
+
 
         private void UpdateCitizenUI(CitizenSO citizen)
         {
