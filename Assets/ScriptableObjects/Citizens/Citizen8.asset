@@ -23,5 +23,5 @@ MonoBehaviour:
     is.\""
   openAIPersonality: '"Old ally of Ryuu who defected, carries immense guilt, reveals
     the full truth carefully"'
-  portraitKey: 
+  portraitKey: old_man_zeth
   portrait: {fileID: 0}

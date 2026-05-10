@@ -20,5 +20,5 @@ MonoBehaviour:
   isForged: 0
   storyHint: '"Another day, another seal. At least it keeps us safe, right?"'
   openAIPersonality: '"Young casual man, unbothered, makes small talk"'
-  portraitKey: 
+  portraitKey: fen_drask
   portrait: {fileID: 0}

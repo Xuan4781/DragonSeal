@@ -20,5 +20,5 @@ MonoBehaviour:
   isForged: 1
   storyHint: '"Please... if they find out my real class they''ll take me away"'
   openAIPersonality: '"Nervous young man hiding his true power level, pleads desperately"  '
-  portraitKey: 
+  portraitKey: taro_vex
   portrait: {fileID: 0}

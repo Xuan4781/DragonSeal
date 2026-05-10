@@ -22,5 +22,5 @@ MonoBehaviour:
     Ryuu''s daughter, would you?"'
   openAIPersonality: '"Wise elderly woman who recognizes Hana''s surname, speaks
     carefully and cryptically"'
-  portraitKey: 
+  portraitKey: elder_sono
   portrait: {fileID: 0}

@@ -28,8 +28,16 @@ namespace DragonSeal.UI
         [SerializeField] private Button rejectButton;
         [SerializeField] private Button flagButton;
 
+        private void Awake()
+        {
+            // Subscribe EARLY in Awake so we never miss the first citizen
+            InspectionManager.Instance.OnCitizenArrived += UpdateCitizenUI;
+            InspectionManager.Instance.OnDecisionMade += OnDecisionMade;
+        }
+
         private void Start()
         {
+            // Hook up buttons
             approveButton.onClick.AddListener(() =>
                 InspectionManager.Instance.MakeDecision(InspectionManager.StampDecision.Approve));
             rejectButton.onClick.AddListener(() =>
@@ -39,10 +47,13 @@ namespace DragonSeal.UI
 
             talkButton.onClick.AddListener(OnTalkClicked);
 
-            InspectionManager.Instance.OnCitizenArrived += UpdateCitizenUI;
-            InspectionManager.Instance.OnDecisionMade += OnDecisionMade;
-
             UpdateDayAndTrust();
+
+            // Safety net — manually refresh with whoever is already current
+            // in case we still missed the event
+            CitizenSO firstCitizen = InspectionManager.Instance.GetCurrentCitizen();
+            if (firstCitizen != null)
+                UpdateCitizenUI(firstCitizen);
         }
 
         private void OnDestroy()
@@ -69,7 +80,6 @@ namespace DragonSeal.UI
             });
         }
 
-
         private void UpdateCitizenUI(CitizenSO citizen)
         {
             citizenNameText.text = citizen.citizenName;
@@ -89,10 +99,10 @@ namespace DragonSeal.UI
             // doc
             docNameText.text = $"Name: {citizen.citizenName}";
             docClassText.text = $"Certified Class: {citizen.certifiedClass}";
-            docForgedText.text = citizen.isForged ? " DISCREPANCY DETECTED" : " Documents Valid";
+            docForgedText.text = citizen.isForged ? "? DISCREPANCY DETECTED" : "? Documents Valid";
             docForgedText.color = citizen.isForged ? Color.red : Color.green;
 
-            // scanner reading
+            // scanner
             scannerResultText.text = $"Scanner: {citizen.actualClass}";
             bool mismatch = citizen.certifiedClass != citizen.actualClass;
             scannerDisplay.color = mismatch ? Color.red : Color.green;

@@ -20,5 +20,5 @@ MonoBehaviour:
   isForged: 0
   storyHint: '"Just doing what the government says, like everyone else..."'
   openAIPersonality: '"Tired working mother, cooperative, just wants to go home"'
-  portraitKey: 
+  portraitKey: mira_solen
   portrait: {fileID: 0}
