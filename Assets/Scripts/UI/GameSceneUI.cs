@@ -75,11 +75,17 @@ namespace DragonSeal.UI
             citizenNameText.text = citizen.citizenName;
             citizenDialogueText.text = "...";
 
-            // Show port
-            if (citizen.portrait != null)
+            // json loader
+            if (!string.IsNullOrEmpty(citizen.portraitKey))
+            {
+                Sprite loaded = JsonImageLoader.Instance.GetPortrait(citizen.portraitKey);
+            }
+            else if (citizen.portrait != null)
+            {
                 citizenPortrait.sprite = citizen.portrait;
+            }
 
-            // doc 
+            // doc
             docNameText.text = $"Name: {citizen.citizenName}";
             docClassText.text = $"Certified Class: {citizen.certifiedClass}";
             docForgedText.text = citizen.isForged ? " DISCREPANCY DETECTED" : " Documents Valid";
