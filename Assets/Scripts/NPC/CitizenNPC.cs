@@ -65,5 +65,23 @@ namespace DragonSeal.NPC
             }
         }
 
+        // when  reaches the target? 
+        protected virtual void OnReachedTarget()
+        {
+            // If reached window, tell inspection manager 
+            if (_targetPosition == WindowPoint)
+                OnArrivedAtWindow();
+
+            // If reached exit, destroy
+            if (_targetPosition == ExitPoint)
+                Destroy(gameObject);
+        }
+
+        protected virtual void OnArrivedAtWindow()
+        {
+            Debug.Log($"{CitizenData.citizenName} has arrived at the window.");
+        }
+
+
     }
 }
