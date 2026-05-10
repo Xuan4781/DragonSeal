@@ -82,6 +82,24 @@ namespace DragonSeal.NPC
             Debug.Log($"{CitizenData.citizenName} has arrived at the window.");
         }
 
+        // animation
+        protected virtual void SetWalkAnimation(bool isWalking)
+        {
+            if (_animator == null) return;
+            _animator.SetBool("IsWalking", isWalking);
+        }
+
+        public virtual void PlaySurprisedAnimation()
+        {
+            if (_animator == null) return;
+            _animator.SetTrigger("Surprised");
+        }
+
+        public virtual void PlayPleadAnimation()
+        {
+            if (_animator == null) return;
+            _animator.SetTrigger("Plead");
+        }
 
     }
 }
