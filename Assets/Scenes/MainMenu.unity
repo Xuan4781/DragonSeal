@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902625156}
   - component: {fileID: 902625155}
+  - component: {fileID: 902625157}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -300,6 +301,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &902625157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902625154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af5a7e0dba296a49878f1c16e7b1d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Core.OpenAIService
+  apiKey: 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
 --- !u!1 &1031599349
 GameObject:
   m_ObjectHideFlags: 0
