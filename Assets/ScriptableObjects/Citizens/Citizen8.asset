@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb38df6fe58e0b48b57a2665610a962, type: 3}
+  m_Name: Citizen8
+  m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Data.CitizenSO
+  citizenName: Old Man Zeth
+  age: 68
+  citizenType: 1
+  certifiedClass: 0
+  actualClass: 0
+  isForged: 0
+  storyHint: "\"I was there the night your mother died. Ryuu didn't do it out of
+    anger. He did it to silence her \u2014 she had found proof of what the DSB really
+    is.\""
+  openAIPersonality: '"Old ally of Ryuu who defected, carries immense guilt, reveals
+    the full truth carefully"'
+  portraitKey: 
+  portrait: {fileID: 0}

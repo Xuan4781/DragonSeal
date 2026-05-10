@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb38df6fe58e0b48b57a2665610a962, type: 3}
+  m_Name: Citizen5
+  m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Data.CitizenSO
+  citizenName: Seika Voss
+  age: 45
+  citizenType: 2
+  certifiedClass: 2
+  actualClass: 4
+  isForged: 1
+  storyHint: ' "I knew a Ryuu once. Strongest person I ever met. Terrifying what
+    he became."'
+  openAIPersonality: '"Calm but dangerous, hiding immense power, drops hints about
+    Ryuu coldly"'
+  portraitKey: 
+  portrait: {fileID: 0}

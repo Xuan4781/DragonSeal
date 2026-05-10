@@ -349,9 +349,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0e62e042e1c964798e0ba15c4679c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Core.InspectionManager
-  dayOneCitizens: []
-  dayTwoCitizens: []
-  dayThreeCitizens: []
+  dayOneCitizens:
+  - {fileID: 11400000, guid: d78613e8fbc453147acd5c6bb4dd4df1, type: 2}
+  - {fileID: 11400000, guid: f2d65bdb248f6f7478bc09cccfcc1525, type: 2}
+  - {fileID: 11400000, guid: 6ae7a1cf09a2ca4479f45c7a24f1e5e3, type: 2}
+  dayTwoCitizens:
+  - {fileID: 11400000, guid: 17123c48f6948e7428610d9461b4f846, type: 2}
+  - {fileID: 11400000, guid: fa343ff21e3da7c4c8f5c615c80f92bd, type: 2}
+  - {fileID: 11400000, guid: c0967cb25fca1254f83fde30c9768603, type: 2}
+  dayThreeCitizens:
+  - {fileID: 11400000, guid: 19792b6a7c89ffc438616215ea133a01, type: 2}
+  - {fileID: 11400000, guid: d8ebabd8b207d8749b10b858e88587fa, type: 2}
 --- !u!4 &157978361
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,6 +1809,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200340345}
   m_CullTransparentMesh: 1
+--- !u!1 &1254084415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1254084417}
+  - component: {fileID: 1254084416}
+  m_Layer: 0
+  m_Name: GameSceneUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1254084416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254084415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40fc58c0cd4dc548ab2c44d6d43c7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.UI.GameSceneUI
+  citizenPortrait: {fileID: 2124560533}
+  citizenNameText: {fileID: 878458103}
+  citizenDialogueText: {fileID: 1758387413}
+  talkButton: {fileID: 383551430}
+  docNameText: {fileID: 578649436}
+  docClassText: {fileID: 2058986312}
+  docForgedText: {fileID: 1774722573}
+  scannerResultText: {fileID: 2146757912}
+  scannerDisplay: {fileID: 1932662115}
+  trustText: {fileID: 1200340347}
+  dayText: {fileID: 883363238}
+  approveButton: {fileID: 1610808914}
+  rejectButton: {fileID: 1083599138}
+  flagButton: {fileID: 128226976}
+--- !u!4 &1254084417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254084415}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 89.53125, y: 267.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1594009299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,3 +3153,4 @@ SceneRoots:
   - {fileID: 157978361}
   - {fileID: 1604039079}
   - {fileID: 847180718}
+  - {fileID: 1254084417}

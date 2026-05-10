@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbb38df6fe58e0b48b57a2665610a962, type: 3}
-  m_Name: c1
+  m_Name: Citizen2
   m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Data.CitizenSO
-  citizenName: Mumna Thornwick
-  age: 34
+  citizenName: Taro Vex
+  age: 28
   citizenType: 0
-  certifiedClass: 2
-  actualClass: 3
+  certifiedClass: 0
+  actualClass: 2
   isForged: 1
-  storyHint: '"My sister used to work at the Dragon Registry... before the fire.'
-  openAIPersonality: '"Nervous man hiding his true dragon power level. Born with
-    Class 4 abilities but forged documents claiming Class 3 to avoid government suppression.
-    Fidgets with papers. Speaks quickly when lying about his power."'
-  portraitKey: citizen_mumna_01
+  storyHint: '"Please... if they find out my real class they''ll take me away"'
+  openAIPersonality: '"Nervous young man hiding his true power level, pleads desperately"  '
+  portraitKey: 
   portrait: {fileID: 0}
