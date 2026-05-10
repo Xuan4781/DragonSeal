@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
+using System.Text;
 using DragonSeal.Data;
 
 namespace DragonSeal.Core
@@ -10,7 +12,7 @@ namespace DragonSeal.Core
 
         [Header("OpenAI Settings")]
         [SerializeField] private string apiKey = "key";
-        private const string API_URL = "https://api.anthropic.com/v1/messages";
+        private const string API_URL = "https://api.openai.com/v1/chat/completions";
 
         private void Awake()
         {
@@ -41,10 +43,63 @@ namespace DragonSeal.Core
 
             string userMessage = "The inspector is looking at you. What do you say?";
 
-            Debug.Log($"System prompt built for {citizen.citizenName}");
+            string jsonBody = $@"{{
+                ""model"": ""gpt-4o-mini"",
+                ""max_tokens"": 150,
+                ""messages"": [
+                    {{""role"": ""system"", ""content"": ""{EscapeJson(systemPrompt)}""}},
+                    {{""role"": ""user"", ""content"": ""{EscapeJson(userMessage)}""}}
+                ]
+            }}";
 
-            yield return null;
-            onComplete?.Invoke(citizen.storyHint);
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonBody);
+
+            using UnityWebRequest request = new UnityWebRequest(API_URL, "POST");
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", $"Bearer {apiKey}");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                string response = request.downloadHandler.text;
+                string dialogue = ParseResponse(response);
+                onComplete?.Invoke(dialogue);
+            }
+            else
+            {
+                Debug.LogWarning($"OpenAI request failed: {request.error}");
+                onComplete?.Invoke(citizen.storyHint);
+            }
+        }
+
+        // parse
+        private string ParseResponse(string json)
+        {
+            try
+            {
+                int choicesIndex = json.IndexOf("\"content\":");
+                if (choicesIndex == -1) return "...";
+
+                int start = json.IndexOf("\"", choicesIndex + 10) + 1;
+                int end = json.IndexOf("\"", start);
+                return json.Substring(start, end - start);
+            }
+            catch
+            {
+                return "...";
+            }
+        }
+
+        private string EscapeJson(string text)
+        {
+            return text
+                .Replace("\\", "\\\\")
+                .Replace("\"", "\\\"")
+                .Replace("\n", "\\n")
+                .Replace("\r", "\\r");
         }
     }
 }
