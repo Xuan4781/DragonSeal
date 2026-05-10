@@ -19,6 +19,8 @@ namespace DragonSeal.Core
             }
         }
 
+        public enum EndingType { None, StayedSilent, ExposedTruth }
+
         // track day
         private int _dayNumber = 1;
         public int DayNumber
@@ -33,6 +35,13 @@ namespace DragonSeal.Core
         {
             get => _trustRating;
             private set => _trustRating = Mathf.Clamp(value, 0, 100);
+        }
+
+        private EndingType _ending = EndingType.None;
+        public EndingType CurrentEnding
+        {
+            get => _ending;
+            set => _ending = value;
         }
 
         private const int SCENE_MAINMENU = 0;
@@ -57,11 +66,11 @@ namespace DragonSeal.Core
             CurrentState = GameState.MainMenu;
         }
 
- 
         public void StartNewGame()
         {
             _dayNumber = 1;
             _trustRating = 100;
+            _ending = EndingType.None;
             CurrentState = GameState.Playing;
             SceneManager.LoadScene(SCENE_GAME);
         }
