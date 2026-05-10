@@ -74,6 +74,17 @@ namespace DragonSeal.UI
                 ? "Status:         REGISTERED"
                 : "Status:         UNREGISTERED";
 
+            if (portraitImage != null)
+            {
+                if (citizen.portrait != null)
+                    portraitImage.sprite = citizen.portrait;
+                else if (!string.IsNullOrEmpty(citizen.portraitKey))
+                {
+                    Sprite loaded = JsonImageLoader.Instance.GetPortrait(citizen.portraitKey);
+                    if (loaded != null) portraitImage.sprite = loaded;
+                }
+            }
+
             IsViewed = true;
             IsStamped = false;
             ClearStamp();
