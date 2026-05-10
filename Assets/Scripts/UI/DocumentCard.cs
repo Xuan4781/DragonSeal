@@ -10,10 +10,13 @@ namespace DragonSeal.UI
     {
         [Header("Document Visual")]
         [SerializeField] private Image documentBackground;
-        [SerializeField] private TextMeshProUGUI titleText;
+        [SerializeField] private Image portraitImage;
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI ageText;
         [SerializeField] private TextMeshProUGUI classText;
+        [SerializeField] private TextMeshProUGUI genderText;
+        [SerializeField] private TextMeshProUGUI regionText;
+        [SerializeField] private TextMeshProUGUI expiryText;
         [SerializeField] private TextMeshProUGUI appointmentText;
         [SerializeField] private GameObject contentPanel;
 
@@ -32,13 +35,28 @@ namespace DragonSeal.UI
 
         public void LoadAsDocument(CitizenSO citizen)
         {
-            titleText.text = "DRAGON SUPPRESSION BUREAU";
-            nameText.text = $"Name:           {citizen.documentName}";
-            ageText.text = $"Age:              {citizen.documentAge}";
-            classText.text = $"Dragon Class: {citizen.documentClass}";
+            nameText.text = $"Name:         {citizen.documentName}";
+            ageText.text = $"Age:            {citizen.documentAge}";
+            classText.text = $"Class:          {citizen.documentClass}";
+            genderText.text = $"Gender:       {citizen.documentGender}";
+            regionText.text = $"Region:        {citizen.documentRegion}";
+            expiryText.text = $"Expires:        {citizen.documentExpiryDate}";
             appointmentText.text = citizen.documentHasAppointment
-                ? $"Appointment:  {citizen.appointmentDate}"
-                : "Appointment:  NONE";
+                ? $"Appointment: {citizen.appointmentDate}"
+                : "Appointment: NONE";
+
+            // Load portrait
+            if (portraitImage != null)
+            {
+                if (citizen.portrait != null)
+                    portraitImage.sprite = citizen.portrait;
+                else if (!string.IsNullOrEmpty(citizen.portraitKey))
+                {
+                    Sprite loaded = JsonImageLoader.Instance.GetPortrait(citizen.portraitKey);
+                    if (loaded != null) portraitImage.sprite = loaded;
+                }
+            }
+
             IsViewed = true;
             IsStamped = false;
             ClearStamp();
@@ -46,13 +64,16 @@ namespace DragonSeal.UI
 
         public void LoadAsDatabase(CitizenSO citizen)
         {
-            titleText.text = "GOVERNMENT DATABASE";
-            nameText.text = $"Name:           {citizen.citizenName}";
-            ageText.text = $"Age:              {citizen.age}";
-            classText.text = $"True Class:    {citizen.trueClass}";
+            nameText.text = $"Name:         {citizen.citizenName}";
+            ageText.text = $"Age:            {citizen.age}";
+            classText.text = $"True Class:  {citizen.trueClass}";
+            genderText.text = $"Gender:       {citizen.trueGender}";
+            regionText.text = $"Region:        {citizen.trueRegion}";
+            expiryText.text = $"Expires:        {citizen.trueExpiryDate}";
             appointmentText.text = citizen.isRegistered
-                ? "Status:          REGISTERED"
-                : "Status:          UNREGISTERED";
+                ? "Status:         REGISTERED"
+                : "Status:         UNREGISTERED";
+
             IsViewed = true;
             IsStamped = false;
             ClearStamp();

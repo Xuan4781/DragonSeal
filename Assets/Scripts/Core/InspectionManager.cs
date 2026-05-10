@@ -8,7 +8,6 @@ namespace DragonSeal.Core
     {
         public static InspectionManager Instance { get; private set; }
 
-        // citizen queue
         [Header("Day Setup")]
         [SerializeField] private List<CitizenSO> dayOneCitizens;
         [SerializeField] private List<CitizenSO> dayTwoCitizens;
@@ -39,10 +38,15 @@ namespace DragonSeal.Core
             NextCitizen();
         }
 
-        // load correct citizen
         private void LoadDayQueue()
         {
             _citizenQueue.Clear();
+
+            if (GameManager.Instance == null)
+            {
+                Debug.LogWarning("GameManager not found! Are you running from MainMenu scene?");
+                return;
+            }
 
             List<CitizenSO> todaysCitizens = GameManager.Instance.DayNumber switch
             {
@@ -58,7 +62,6 @@ namespace DragonSeal.Core
             Debug.Log($"Day {GameManager.Instance.DayNumber} queue loaded with {_citizenQueue.Count} citizens.");
         }
 
-        // pull next citizen
         public void NextCitizen()
         {
             if (_citizenQueue.Count == 0)
@@ -74,7 +77,6 @@ namespace DragonSeal.Core
             Debug.Log($"Next citizen: {_currentCitizen.citizenName}");
         }
 
-        // make stamp des
         public void MakeDecision(StampDecision decision)
         {
             if (_currentCitizen == null) return;
@@ -82,7 +84,6 @@ namespace DragonSeal.Core
             if (_currentCitizen.citizenType == CitizenType.Story &&
                 GameManager.Instance.DayNumber == 3)
             {
-                
                 GameManager.Instance.CurrentEnding = decision == StampDecision.Flag
                     ? GameManager.EndingType.ExposedTruth
                     : GameManager.EndingType.StayedSilent;
@@ -109,12 +110,22 @@ namespace DragonSeal.Core
             NextCitizen();
         }
 
-        // check des if right
+        // check all
         private bool IsDecisionCorrect(StampDecision decision)
         {
             if (_currentCitizen == null) return false;
 
-            bool shouldReject = _currentCitizen.isForged;
+            bool shouldReject =
+                _currentCitizen.isForged ||
+                !_currentCitizen.isRegistered ||
+                !_currentCitizen.documentHasAppointment ||
+                _currentCitizen.documentClass != _currentCitizen.trueClass ||
+                _currentCitizen.documentName != _currentCitizen.citizenName ||
+                _currentCitizen.documentAge != _currentCitizen.age ||
+                _currentCitizen.documentGender != _currentCitizen.trueGender ||
+                _currentCitizen.documentRegion != _currentCitizen.trueRegion ||
+                _currentCitizen.documentExpiryDate != _currentCitizen.trueExpiryDate;
+
             return decision == StampDecision.Reject
                 ? shouldReject
                 : decision == StampDecision.Approve ? !shouldReject : true;
