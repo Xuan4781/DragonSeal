@@ -30,14 +30,12 @@ namespace DragonSeal.UI
 
         private void Awake()
         {
-            // Subscribe EARLY in Awake so we never miss the first citizen
             InspectionManager.Instance.OnCitizenArrived += UpdateCitizenUI;
             InspectionManager.Instance.OnDecisionMade += OnDecisionMade;
         }
 
         private void Start()
         {
-            // Hook up buttons
             approveButton.onClick.AddListener(() =>
                 InspectionManager.Instance.MakeDecision(InspectionManager.StampDecision.Approve));
             rejectButton.onClick.AddListener(() =>
@@ -49,8 +47,6 @@ namespace DragonSeal.UI
 
             UpdateDayAndTrust();
 
-            // Safety net — manually refresh with whoever is already current
-            // in case we still missed the event
             CitizenSO firstCitizen = InspectionManager.Instance.GetCurrentCitizen();
             if (firstCitizen != null)
                 UpdateCitizenUI(firstCitizen);
@@ -99,7 +95,7 @@ namespace DragonSeal.UI
             // doc
             docNameText.text = $"Name: {citizen.citizenName}";
             docClassText.text = $"Certified Class: {citizen.certifiedClass}";
-            docForgedText.text = citizen.isForged ? "? DISCREPANCY DETECTED" : "? Documents Valid";
+            docForgedText.text = citizen.isForged ? "DISCREPANCY DETECTED" : "Documents Valid";
             docForgedText.color = citizen.isForged ? Color.red : Color.green;
 
             // scanner
