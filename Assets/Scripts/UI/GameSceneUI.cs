@@ -79,6 +79,7 @@ namespace DragonSeal.UI
             if (!string.IsNullOrEmpty(citizen.portraitKey))
             {
                 Sprite loaded = JsonImageLoader.Instance.GetPortrait(citizen.portraitKey);
+                citizenPortrait.sprite = loaded != null ? loaded : citizen.portrait;
             }
             else if (citizen.portrait != null)
             {
