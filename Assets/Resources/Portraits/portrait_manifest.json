@@ -1,0 +1,12 @@
+{
+  "portraits": [
+    { "key": "mira_solen", "path": "Portraits/mira" },
+    { "key": "taro_vex", "path": "Portraits/taro" },
+    { "key": "elder_sono", "path": "Portraits/elder_sono" },
+    { "key": "fen_drask", "path": "Portraits/fen" },
+    { "key": "seika_voss", "path": "Portraits/seika" },
+    { "key": "lira_moun", "path": "Portraits/lira" },
+    { "key": "kael_drynn", "path": "Portraits/kael" },
+    { "key": "old_man_zeth", "path": "Portraits/zeth" }
+  ]
+}
