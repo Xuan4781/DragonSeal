@@ -13,19 +13,24 @@ namespace DragonSeal.Data
         public int age;
         public CitizenType citizenType;
 
-        // doc info, scanner info, and if doc has problem
-        [Header("Dragon Info")]
-        public DragonClass certifiedClass;   
-        public DragonClass actualClass;      
-        public bool isForged;                
+        [Header("Government Database (True Data)")]
+        public DragonClass trueClass;
+        public bool isRegistered;
+        public string appointmentDate;
 
-        // story hints
+        [Header("Citizen Document (What They Hand You)")]
+        public DragonClass documentClass;
+        public string documentName;
+        public int documentAge;
+        public bool documentHasAppointment;
+        public bool isForged;
+
         [Header("Story")]
-        public string storyHint;             
-        public string openAIPersonality;     
+        public string storyHint;
+        public string openAIPersonality;
 
         [Header("Visuals")]
-        public string portraitKey;       
-        public Sprite portrait;       
+        public string portraitKey;
+        public Sprite portrait;
     }
 }

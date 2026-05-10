@@ -13,11 +13,11 @@ namespace DragonSeal.Data
 
         public DocumentData(CitizenSO citizen)
         {
-            citizenName = citizen.citizenName;
-            age = citizen.age;
-            certifiedClass = citizen.certifiedClass;
+            citizenName = citizen.documentName;
+            age = citizen.documentAge;
+            certifiedClass = citizen.documentClass;
             hasValidLicense = !citizen.isForged;
-            hasValidAppointment = !citizen.isForged;
+            hasValidAppointment = citizen.documentHasAppointment;
             isExpired = false;
         }
     }

@@ -37,7 +37,7 @@ namespace DragonSeal.Core
                 You are at a government Dragon Suppression Bureau checkpoint.
                 Your name is {citizen.citizenName}, age {citizen.age}.
                 Your personality: {citizen.openAIPersonality}.
-                Your certified dragon class is {citizen.certifiedClass}.
+                Your certified dragon class is {citizen.documentClass}.
                 {(citizen.isForged ? "Your documents are forged. You are hiding your true power." : "Your documents are legitimate.")}
                 Respond in 1-2 short sentences as this character. Stay in character. Be natural and human.";
 
