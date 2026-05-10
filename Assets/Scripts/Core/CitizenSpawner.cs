@@ -41,5 +41,37 @@ namespace DragonSeal.Core
             }
         }
 
+        // spawn citizen
+        private void SpawnCitizen(CitizenSO citizenData)
+        {
+            if (_currentCitizenNPC != null)
+                Destroy(_currentCitizenNPC.gameObject);
+
+            GameObject prefabToSpawn = citizenData.citizenType switch
+            {
+                CitizenType.Regular => regularCitizenPrefab,
+                CitizenType.Story => storyCitizenPrefab,
+                CitizenType.Fugitive => fugitiveCitizenPrefab,
+                _ => regularCitizenPrefab
+            };
+
+            if (prefabToSpawn == null)
+            {
+                Debug.LogWarning("Citizen prefab not assigned in CitizenSpawner!");
+                return;
+            }
+
+            GameObject citizenGO = Instantiate(prefabToSpawn);
+            _currentCitizenNPC = citizenGO.GetComponent<CitizenNPC>();
+            _currentCitizenNPC.Initialize(citizenData);
+        }
+
+        // citizen walk out after the decision
+        private void DespawnCitizen(InspectionManager.StampDecision decision)
+        {
+            if (_currentCitizenNPC != null)
+                _currentCitizenNPC.WalkOut();
+        }
+
     }
 }
