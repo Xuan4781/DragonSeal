@@ -16,7 +16,7 @@ namespace DragonSeal.Core
         private Queue<CitizenSO> _citizenQueue = new Queue<CitizenSO>();
         private CitizenSO _currentCitizen;
 
-        public enum StampDecision { Approve, Reject, Flag }
+        public enum StampDecision { Approve, Reject }
 
         public System.Action<CitizenSO> OnCitizenArrived;
         public System.Action<StampDecision> OnDecisionMade;
@@ -84,7 +84,7 @@ namespace DragonSeal.Core
             if (_currentCitizen.citizenType == CitizenType.Story &&
                 GameManager.Instance.DayNumber == 3)
             {
-                GameManager.Instance.CurrentEnding = decision == StampDecision.Flag
+                GameManager.Instance.CurrentEnding = decision == StampDecision.Reject
                     ? GameManager.EndingType.ExposedTruth
                     : GameManager.EndingType.StayedSilent;
             }
@@ -99,9 +99,6 @@ namespace DragonSeal.Core
                 case StampDecision.Reject:
                     GameManager.Instance.ModifyTrust(correct ? +10 : -15);
                     break;
-                case StampDecision.Flag:
-                    GameManager.Instance.ModifyTrust(0);
-                    break;
             }
 
             OnDecisionMade?.Invoke(decision);
@@ -110,7 +107,6 @@ namespace DragonSeal.Core
             NextCitizen();
         }
 
-        // check all
         private bool IsDecisionCorrect(StampDecision decision)
         {
             if (_currentCitizen == null) return false;
@@ -126,9 +122,7 @@ namespace DragonSeal.Core
                 _currentCitizen.documentRegion != _currentCitizen.trueRegion ||
                 _currentCitizen.documentExpiryDate != _currentCitizen.trueExpiryDate;
 
-            return decision == StampDecision.Reject
-                ? shouldReject
-                : decision == StampDecision.Approve ? !shouldReject : true;
+            return decision == StampDecision.Reject ? shouldReject : !shouldReject;
         }
 
         public CitizenSO GetCurrentCitizen() => _currentCitizen;

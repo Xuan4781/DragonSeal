@@ -45,7 +45,6 @@ namespace DragonSeal.UI
                 ? $"Appointment: {citizen.appointmentDate}"
                 : "Appointment: NONE";
 
-            // Load portrait
             if (portraitImage != null)
             {
                 if (citizen.portrait != null)
@@ -90,7 +89,6 @@ namespace DragonSeal.UI
             ClearStamp();
         }
 
-        // add stamp on doc
         public void ApplyStamp(InspectionManager.StampDecision decision)
         {
             if (stampMark == null || stampText == null) return;
@@ -106,10 +104,6 @@ namespace DragonSeal.UI
                 case InspectionManager.StampDecision.Reject:
                     stampMark.color = new Color(0.6f, 0.1f, 0.1f, 0.85f);
                     stampText.text = "REJECTED";
-                    break;
-                case InspectionManager.StampDecision.Flag:
-                    stampMark.color = new Color(0.6f, 0.5f, 0.1f, 0.85f);
-                    stampText.text = "FLAGGED";
                     break;
             }
 

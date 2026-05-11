@@ -18,7 +18,6 @@ namespace DragonSeal.UI
         {
             if (GameManager.Instance == null) return;
 
-            // pick ending
             switch (GameManager.Instance.CurrentEnding)
             {
                 case GameManager.EndingType.ExposedTruth:
@@ -41,7 +40,7 @@ namespace DragonSeal.UI
         {
             endingTitleText.text = "ENDING A\nThe Truth Bleeds Out";
             endingBodyText.text =
-                "You flagged Old Man Zeth's file.\n\n" +
+                "You rejected Old Man Zeth's file.\n\n" +
                 "Within days, investigators pulled the thread.\n" +
                 "The DSB's corruption unraveled publicly —\n" +
                 "forced sealings, disappeared dissidents,\n" +
@@ -62,7 +61,7 @@ namespace DragonSeal.UI
         {
             endingTitleText.text = "ENDING B\nThe Weight of Silence";
             endingBodyText.text =
-                "You stamped Zeth's form and sent him on his way.\n\n" +
+                "You approved Old Man Zeth's form and sent him on his way.\n\n" +
                 "You told yourself it wasn't your place.\n" +
                 "That one old man's testimony wouldn't change anything.\n" +
                 "That you needed this job to survive.\n\n" +
