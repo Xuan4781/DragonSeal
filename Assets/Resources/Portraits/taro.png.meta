@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1d23f41ccfaffb4eb3495998533e2a7
+guid: bb90c5d8a144a7c4ab507dfecd5cce73
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4896054382793421408
-    second: taro_0
+      213: 5782072753695907830
+    second: taro 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: taro_0
+      name: taro 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 424
-        height: 473
+        x: 48
+        y: 140
+        width: 173
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ad8a90ba78bd0cb0800000000000000
-      internalID: -4896054382793421408
+      spriteID: 6ff5285e88c0e3050800000000000000
+      internalID: 5782072753695907830
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      taro_0: -4896054382793421408
+      taro 1_0: 5782072753695907830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

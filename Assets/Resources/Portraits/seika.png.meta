@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 12d650798511786448ec6f787ecf2bab
+guid: 6c8b6b9eb52140a4e9d8adbafedb0455
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 226705059559785989
-    second: seika_0
+      213: -8734558192334655692
+    second: seika 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seika_0
+      name: seika 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 424
-        height: 473
+        x: 62
+        y: 140
+        width: 151
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50648dfec0b652300800000000000000
-      internalID: 226705059559785989
+      spriteID: 43f2aeb0a9d98c680800000000000000
+      internalID: -8734558192334655692
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      seika_0: 226705059559785989
+      seika 1_0: -8734558192334655692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

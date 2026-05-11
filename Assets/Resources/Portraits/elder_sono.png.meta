@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2a027b84095677140a93300b9a354eeb
+guid: c774436559394ef478621559102e7b12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6253092337250491686
-    second: elder_sono_0
+      213: 5531217046521794924
+    second: elder_sono 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: elder_sono_0
+      name: elder_sono 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 424
-        height: 473
+        x: 69
+        y: 140
+        width: 127
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad2a77a46ad8839a0800000000000000
-      internalID: -6253092337250491686
+      spriteID: c6154812994d2cc40800000000000000
+      internalID: 5531217046521794924
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      elder_sono_0: -6253092337250491686
+      elder_sono 1_0: 5531217046521794924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
