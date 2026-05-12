@@ -24,13 +24,11 @@ namespace DragonSeal.UI
             // d2
             "Tonight's government memo sits on your desk.\n" +
             "'Fugitive dragon-powered individual at large. Extremely dangerous.\n" +
-            "Last seen near the capital. Do not engage.'\n" +
-            "The description feels familiar. You can't explain why.",
+            "Last seen near the capital. Do not engage.'\n",
             // d3
             "You sit alone in the empty booth long after closing.\n" +
-            "Everything Zeth told you plays back in your mind.\n" +
-            "Your father didn't just kill your mother.\n" +
-            "He did it to protect a system built on lies.\n\n" +
+            "A lot of people have been mentioning mom lately.\n" +
+            "Why? Why of all times? Who will I be expecting a week from now?\n" +
             "To be continued..."
         };
 

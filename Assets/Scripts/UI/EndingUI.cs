@@ -38,44 +38,27 @@ namespace DragonSeal.UI
         // ending 1
         private void ShowExposedEnding()
         {
-            endingTitleText.text = "ENDING A\nThe Truth Bleeds Out";
+            endingTitleText.text = "ENDING A\nWhat is next?";
             endingBodyText.text =
-                "You rejected Old Man Zeth's file.\n\n" +
-                "Within days, investigators pulled the thread.\n" +
-                "The DSB's corruption unraveled publicly —\n" +
+                "You rejected Zeth.\n\n" +
+                "His file was perfectly valid, you rejected him out of what?\n" +
+                "The DSB's corruption unraveled, there was more behind the scenes. —\n" +
                 "forced sealings, disappeared dissidents,\n" +
-                "and at the center of it all: Ryuu.\n\n" +
-                "Your father was arrested at the border.\n" +
-                "He didn't resist.\n\n" +
-                "You visited him once, through bulletproof glass.\n" +
-                "He looked at your sword — five times your height —\n" +
-                "and for the first time, he looked afraid.\n\n" +
-                "You didn't say a word.\n" +
-                "You didn't have to.";
+                "and of course that means more dangers lies ahead.";
 
-            endingFooterText.text = "— Hana chose truth over silence.";
+            endingFooterText.text = "Hana didn't want to take a risk.";
         }
 
         // ending 2
         private void ShowSilentEnding()
         {
-            endingTitleText.text = "ENDING B\nThe Weight of Silence";
+            endingTitleText.text = "ENDING B\nWhat do we do now?";
             endingBodyText.text =
-                "You approved Old Man Zeth's form and sent him on his way.\n\n" +
-                "You told yourself it wasn't your place.\n" +
-                "That one old man's testimony wouldn't change anything.\n" +
-                "That you needed this job to survive.\n\n" +
-                "Maybe all of that was true.\n\n" +
-                "Ryuu was never found.\n" +
-                "The DSB continued its work.\n" +
-                "Citizens kept coming through your booth,\n" +
-                "handing you their papers with trembling hands.\n\n" +
-                "Every night you went home to an empty room\n" +
-                "and leaned your sword against the wall —\n" +
-                "five times your height,\n" +
-                "and heavier every day.";
+                "You approved Zeth's form and sent him on his way.\n\n" +
+                "You told yourself it's just a job.\n" +
+                "That man's threat wouldn't change anything.";
 
-            endingFooterText.text = "— Hana chose survival over truth.";
+            endingFooterText.text = "Hana just wants to get on her day.";
         }
 
         private void OnPlayAgainClicked()
