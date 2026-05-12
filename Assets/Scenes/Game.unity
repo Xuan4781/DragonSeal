@@ -567,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.521243}
   m_AnchorMax: {x: 0.5, y: 0.89300007}
-  m_AnchoredPosition: {x: 16, y: -130.65}
+  m_AnchoredPosition: {x: 35, y: -138.01}
   m_SizeDelta: {x: 220.5621, y: -494.4463}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307916641
@@ -719,8 +719,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.352997, y: -271}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -19.1, y: -188.8}
+  m_SizeDelta: {x: 167.8607, y: 51.438}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383551430
 MonoBehaviour:
@@ -786,8 +786,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 2530564911472380330, guid: 8f0d6cc3f2235c04ca2135273f8ac6cb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2051,8 +2051,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 413.99985, y: -67}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 532.21, y: -84}
+  m_SizeDelta: {x: 185.22, y: 72.503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083599139
 MonoBehaviour:
@@ -2074,8 +2074,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2495537783218611662, guid: 3c7d513e30db5a94da0b3599a3f1d628, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2167,8 +2167,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: REJECT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b7e3af3ec9d96bc4f906a011a40f806e, type: 2}
+  m_sharedMaterial: {fileID: -8473912731538513314, guid: b7e3af3ec9d96bc4f906a011a40f806e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2441,8 +2441,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: APPROVE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b7e3af3ec9d96bc4f906a011a40f806e, type: 2}
+  m_sharedMaterial: {fileID: -8473912731538513314, guid: b7e3af3ec9d96bc4f906a011a40f806e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2701,7 +2701,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.UI.GameSceneUI
   citizenPortrait: {fileID: 2124560533}
-  citizenNameText: {fileID: 0}
   citizenDialogueText: {fileID: 1758387413}
   talkButton: {fileID: 383551430}
   citizenDocumentCard: {fileID: 1650153840}
@@ -3437,8 +3436,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Talk
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b7e3af3ec9d96bc4f906a011a40f806e, type: 2}
+  m_sharedMaterial: {fileID: -8473912731538513314, guid: b7e3af3ec9d96bc4f906a011a40f806e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3654,8 +3653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415, y: -29}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 532.2133, y: 12.458706}
+  m_SizeDelta: {x: 185.2236, y: 72.5032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610808915
 MonoBehaviour:
@@ -3677,8 +3676,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -5018554812638393338, guid: dae9b9d4f0a982948857a0573a72fe38, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4995,7 +4994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.353, y: 39.5}
+  m_AnchoredPosition: {x: -12.353, y: 42}
   m_SizeDelta: {x: 324.5708, y: 349.8729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124560533
