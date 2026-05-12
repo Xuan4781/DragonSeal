@@ -40,5 +40,6 @@ namespace DragonSeal.Data
         [Header("Visuals")]
         public string portraitKey;
         public Sprite portrait;
+        public Sprite documentPhoto;
     }
 }

@@ -15,12 +15,24 @@ MonoBehaviour:
   citizenName: Lira Moun
   age: 38
   citizenType: 1
-  certifiedClass: 1
-  actualClass: 1
+  trueClass: 1
+  isRegistered: 1
+  appointmentDate: 2026-05-12
+  trueGender: 1
+  trueRegion: 0
+  trueExpiryDate: 2027-01-01
+  documentClass: 1
+  documentName: Lira Moun
+  documentAge: 38
+  documentHasAppointment: 1
+  documentGender: 1
+  documentRegion: 0
+  documentExpiryDate: 2027-01-01
   isForged: 0
-  storyHint: '"Your mother was kind. She came through my village once. I''m sorry
-    for what happened to her."'
+  storyHint: '"Hello again, dear. I''m sorry about your mother. How have you been?
+    Good to see you doing well."'
   openAIPersonality: '"Gentle woman who knew Hana''s mother, speaks with grief and
     sympathy"'
   portraitKey: lira_moun
-  portrait: {fileID: 0}
+  portrait: {fileID: 3271466508774140024, guid: 50a12663344576d4aa7d913a3658f54a, type: 3}
+  documentPhoto: {fileID: 2329758298171588199, guid: 48bce8b29f2f9d34e896055264e0d1f0, type: 3}

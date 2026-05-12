@@ -12,16 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb38df6fe58e0b48b57a2665610a962, type: 3}
   m_Name: Citizen8
   m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Data.CitizenSO
-  citizenName: Old Man Zeth
+  citizenName: Zeth
   age: 68
   citizenType: 1
-  certifiedClass: 0
-  actualClass: 0
+  trueClass: 0
+  isRegistered: 1
+  appointmentDate: 2026-05-12
+  trueGender: 0
+  trueRegion: 2
+  trueExpiryDate: 2027-01-01
+  documentClass: 0
+  documentName: Zeth
+  documentAge: 68
+  documentHasAppointment: 1
+  documentGender: 0
+  documentRegion: 2
+  documentExpiryDate: 2027-01-01
   isForged: 0
-  storyHint: "\"I was there the night your mother died. Ryuu didn't do it out of
-    anger. He did it to silence her \u2014 she had found proof of what the DSB really
-    is.\""
+  storyHint: '"Someone will arrive a week from now, let them through. You''ve been
+    warned."'
   openAIPersonality: '"Old ally of Ryuu who defected, carries immense guilt, reveals
     the full truth carefully"'
   portraitKey: old_man_zeth
-  portrait: {fileID: 0}
+  portrait: {fileID: 4875788378476227476, guid: a4009e4dcc01d384285f30e585f69201, type: 3}
+  documentPhoto: {fileID: 7554317920740269945, guid: d8f2c444d79fc9042952c7119f7f0775, type: 3}

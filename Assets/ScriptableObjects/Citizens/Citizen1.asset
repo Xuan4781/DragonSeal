@@ -15,15 +15,22 @@ MonoBehaviour:
   citizenName: Mira Solen
   age: 34
   citizenType: 0
-  trueClass: 0
+  trueClass: 1
   isRegistered: 1
-  appointmentDate: 5/10/26
-  documentClass: 0
+  appointmentDate: May 12th, 2026
+  trueGender: 1
+  trueRegion: 0
+  trueExpiryDate: 2027-01-01
+  documentClass: 1
   documentName: Mira Solen
   documentAge: 34
   documentHasAppointment: 1
+  documentGender: 1
+  documentRegion: 0
+  documentExpiryDate: 2027-01-01
   isForged: 0
   storyHint: '"Just doing what the government says, like everyone else..."'
   openAIPersonality: '"Tired working mother, cooperative, just wants to go home"'
   portraitKey: mira_solen
-  portrait: {fileID: -5623194428626525839, guid: cc9204223d6a9a44ca444360fdce2ecc, type: 3}
+  portrait: {fileID: -5657078978471054008, guid: 25805ba22125f854ab08e9c3c23531f9, type: 3}
+  documentPhoto: {fileID: -569249355796572706, guid: 4799bf0ddc8f7d840a4b7d6eeeaa7302, type: 3}

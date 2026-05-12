@@ -12,15 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb38df6fe58e0b48b57a2665610a962, type: 3}
   m_Name: Citizen3
   m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.Data.CitizenSO
-  citizenName: Elder Sono
-  age: 71
+  citizenName: Sono
+  age: 21
   citizenType: 1
-  certifiedClass: 0
-  actualClass: 0
+  trueClass: 0
+  isRegistered: 1
+  appointmentDate: 2026-05-12
+  trueGender: 1
+  trueRegion: 2
+  trueExpiryDate: 2027-01-01
+  documentClass: 0
+  documentName: Sono
+  documentAge: 21
+  documentHasAppointment: 1
+  documentGender: 1
+  documentRegion: 2
+  documentExpiryDate: 2027-01-01
   isForged: 0
-  storyHint: '"Hana... that''s the name on your badge. You wouldn''t happen to be
-    Ryuu''s daughter, would you?"'
+  storyHint: '"Oh Hana? I know you dear."'
   openAIPersonality: '"Wise elderly woman who recognizes Hana''s surname, speaks
     carefully and cryptically"'
   portraitKey: elder_sono
-  portrait: {fileID: 0}
+  portrait: {fileID: 5531217046521794924, guid: c774436559394ef478621559102e7b12, type: 3}
+  documentPhoto: {fileID: 4804373394359771345, guid: 50928c6fa7acbbf41be117d50a44f411, type: 3}

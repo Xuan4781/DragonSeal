@@ -15,10 +15,22 @@ MonoBehaviour:
   citizenName: Taro Vex
   age: 28
   citizenType: 0
-  certifiedClass: 0
-  actualClass: 2
+  trueClass: 2
+  isRegistered: 1
+  appointmentDate: May 12th, 2026
+  trueGender: 0
+  trueRegion: 1
+  trueExpiryDate: 2027-01-01
+  documentClass: 0
+  documentName: Taro Vex
+  documentAge: 28
+  documentHasAppointment: 1
+  documentGender: 0
+  documentRegion: 1
+  documentExpiryDate: 2027-01-01
   isForged: 1
-  storyHint: '"Please... if they find out my real class they''ll take me away"'
+  storyHint: '"Please.please I need to be somewhere later"'
   openAIPersonality: '"Nervous young man hiding his true power level, pleads desperately"  '
   portraitKey: taro_vex
-  portrait: {fileID: 0}
+  portrait: {fileID: 5782072753695907830, guid: bb90c5d8a144a7c4ab507dfecd5cce73, type: 3}
+  documentPhoto: {fileID: 8745697166717555962, guid: 612c2bb114571bb4cbec485d917db63a, type: 3}

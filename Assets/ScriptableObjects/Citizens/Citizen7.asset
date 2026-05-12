@@ -15,11 +15,23 @@ MonoBehaviour:
   citizenName: Kael Drynn
   age: 33
   citizenType: 2
-  certifiedClass: 1
-  actualClass: 5
+  trueClass: 5
+  isRegistered: 0
+  appointmentDate: none
+  trueGender: 0
+  trueRegion: 2
+  trueExpiryDate: 2027-01-01
+  documentClass: 1
+  documentName: Kael Drynn
+  documentAge: 33
+  documentHasAppointment: 1
+  documentGender: 0
+  documentRegion: 1
+  documentExpiryDate: 2027-01-01
   isForged: 1
-  storyHint: '"Ryuu sends his regards. He knows you''re here, Hana."'
+  storyHint: '"He knows you''re here."'
   openAIPersonality: '"Cold messenger sent by Ryuu, intimidating, speaks in short
     threatening sentences"'
   portraitKey: kael_drynn
-  portrait: {fileID: 0}
+  portrait: {fileID: 3862426809462068135, guid: 0d34338790d8ca3448363037ef72b39a, type: 3}
+  documentPhoto: {fileID: -8360925196643405539, guid: 6ce077d028a095148b696efde38e9f16, type: 3}

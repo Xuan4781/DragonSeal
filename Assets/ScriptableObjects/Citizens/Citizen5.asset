@@ -15,12 +15,23 @@ MonoBehaviour:
   citizenName: Seika Voss
   age: 45
   citizenType: 2
-  certifiedClass: 2
-  actualClass: 4
+  trueClass: 4
+  isRegistered: 1
+  appointmentDate: 2026-05-12
+  trueGender: 1
+  trueRegion: 4
+  trueExpiryDate: 2027-01-01
+  documentClass: 2
+  documentName: Seika Voss
+  documentAge: 45
+  documentHasAppointment: 0
+  documentGender: 1
+  documentRegion: 4
+  documentExpiryDate: 2027-01-01
   isForged: 1
-  storyHint: ' "I knew a Ryuu once. Strongest person I ever met. Terrifying what
-    he became."'
+  storyHint: '"You know what to do."'
   openAIPersonality: '"Calm but dangerous, hiding immense power, drops hints about
     Ryuu coldly"'
   portraitKey: seika_voss
-  portrait: {fileID: 0}
+  portrait: {fileID: -8734558192334655692, guid: 6c8b6b9eb52140a4e9d8adbafedb0455, type: 3}
+  documentPhoto: {fileID: -4693618875835528245, guid: fc16e06d32ff67045833860ea4e2cd4d, type: 3}

@@ -15,10 +15,22 @@ MonoBehaviour:
   citizenName: Fen Drask
   age: 22
   citizenType: 0
-  certifiedClass: 1
-  actualClass: 1
+  trueClass: 1
+  isRegistered: 1
+  appointmentDate: 2026-05-12
+  trueGender: 0
+  trueRegion: 3
+  trueExpiryDate: 2027-01-01
+  documentClass: 1
+  documentName: Fen Drask
+  documentAge: 22
+  documentHasAppointment: 1
+  documentGender: 0
+  documentRegion: 3
+  documentExpiryDate: 2027-01-01
   isForged: 0
   storyHint: '"Another day, another seal. At least it keeps us safe, right?"'
   openAIPersonality: '"Young casual man, unbothered, makes small talk"'
   portraitKey: fen_drask
-  portrait: {fileID: 0}
+  portrait: {fileID: 8434122945730028894, guid: c881d0ef1f949eb46b8b83fbbed2954a, type: 3}
+  documentPhoto: {fileID: 9134307958991425007, guid: c44329b33720eb64288e68e8b3da3125, type: 3}

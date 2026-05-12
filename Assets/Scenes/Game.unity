@@ -2740,6 +2740,7 @@ MonoBehaviour:
   regularCitizenPrefab: {fileID: 8164206874714174792, guid: b4e31109124a42b4292148e62d2d8326, type: 3}
   storyCitizenPrefab: {fileID: 4802223753233696913, guid: 1881ad6f0b40a5e48a77c3633535aa27, type: 3}
   fugitiveCitizenPrefab: {fileID: 4362894126695591540, guid: 2cab68c0515eb054abe81084c619cf84, type: 3}
+  _currentCitizenNPC: {fileID: 0}
 --- !u!4 &1278025281
 Transform:
   m_ObjectHideFlags: 0
@@ -4990,8 +4991,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.353, y: 42}
-  m_SizeDelta: {x: 324.5708, y: 349.8729}
+  m_AnchoredPosition: {x: -11, y: 47}
+  m_SizeDelta: {x: 294.4218, y: 349.8729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124560533
 MonoBehaviour:

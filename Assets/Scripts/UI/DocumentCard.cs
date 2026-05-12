@@ -45,16 +45,8 @@ namespace DragonSeal.UI
                 ? citizen.appointmentDate
                 : "NONE";
 
-            if (portraitImage != null)
-            {
-                if (citizen.portrait != null)
-                    portraitImage.sprite = citizen.portrait;
-                else if (!string.IsNullOrEmpty(citizen.portraitKey))
-                {
-                    Sprite loaded = JsonImageLoader.Instance.GetPortrait(citizen.portraitKey);
-                    if (loaded != null) portraitImage.sprite = loaded;
-                }
-            }
+            if (portraitImage != null && citizen.documentPhoto != null)
+                portraitImage.sprite = citizen.documentPhoto;
 
             IsViewed = true;
             IsStamped = false;
@@ -71,16 +63,8 @@ namespace DragonSeal.UI
             expiryText.text = citizen.trueExpiryDate;
             appointmentText.text = citizen.isRegistered ? "REGISTERED" : "UNREGISTERED";
 
-            if (portraitImage != null)
-            {
-                if (citizen.portrait != null)
-                    portraitImage.sprite = citizen.portrait;
-                else if (!string.IsNullOrEmpty(citizen.portraitKey))
-                {
-                    Sprite loaded = JsonImageLoader.Instance.GetPortrait(citizen.portraitKey);
-                    if (loaded != null) portraitImage.sprite = loaded;
-                }
-            }
+            if (portraitImage != null && citizen.documentPhoto != null)
+                portraitImage.sprite = citizen.documentPhoto;
 
             IsViewed = true;
             IsStamped = false;
