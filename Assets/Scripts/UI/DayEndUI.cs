@@ -14,7 +14,6 @@ namespace DragonSeal.UI
         [SerializeField] private Button continueButton;
         [SerializeField] private Button mainMenuButton;
 
-        // end of day story events
         private string[] _storyEvents = new string[]
         {
             // d1
@@ -22,19 +21,17 @@ namespace DragonSeal.UI
             "A wanted poster catches your eye — the name is redacted,\n" +
             "but the dragon class reads: CLASS S.\n" +
             "You haven't seen that classification before.",
-
             // d2
             "Tonight's government memo sits on your desk.\n" +
             "'Fugitive dragon-powered individual at large. Extremely dangerous.\n" +
             "Last seen near the capital. Do not engage.'\n" +
             "The description feels familiar. You can't explain why.",
-
             // d3
             "You sit alone in the empty booth long after closing.\n" +
             "Everything Zeth told you plays back in your mind.\n" +
             "Your father didn't just kill your mother.\n" +
             "He did it to protect a system built on lies.\n\n" +
-            "What do you do now?"
+            "To be continued..."
         };
 
         private void Start()
@@ -56,7 +53,10 @@ namespace DragonSeal.UI
 
         private void OnContinueClicked()
         {
-            GameManager.Instance.StartNextDay();
+            if (GameManager.Instance.DayNumber == 3)
+                GameManager.Instance.GoToEnding();
+            else
+                GameManager.Instance.StartNextDay();
         }
 
         private void OnMainMenuClicked()

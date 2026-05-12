@@ -11,7 +11,6 @@ namespace DragonSeal.UI
     {
         [Header("Citizen Panel")]
         [SerializeField] private Image citizenPortrait;
-        [SerializeField] private TextMeshProUGUI citizenNameText;
         [SerializeField] private TextMeshProUGUI citizenDialogueText;
         [SerializeField] private Button talkButton;
 
@@ -54,7 +53,6 @@ namespace DragonSeal.UI
 
         private void UpdateCitizenUI(CitizenSO citizen)
         {
-            citizenNameText.text = citizen.citizenName;
             citizenDialogueText.text = "...";
 
             if (!string.IsNullOrEmpty(citizen.portraitKey))
@@ -68,6 +66,7 @@ namespace DragonSeal.UI
             citizenDocumentCard.LoadAsDocument(citizen);
             governmentDatabaseCard.LoadAsDatabase(citizen);
 
+
             warningText.text = "";
             UpdateDayAndTrust();
         }
@@ -77,7 +76,7 @@ namespace DragonSeal.UI
         {
             if (!citizenDocumentCard.IsViewed || !governmentDatabaseCard.IsViewed)
             {
-                warningText.text = "? Review both documents before stamping!";
+                warningText.text = " Review both documents before stamping!";
                 warningText.color = Color.yellow;
                 return;
             }

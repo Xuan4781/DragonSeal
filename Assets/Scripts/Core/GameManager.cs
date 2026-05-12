@@ -113,6 +113,12 @@ namespace DragonSeal.Core
             SceneManager.LoadScene(SCENE_MAINMENU);
         }
 
+        public void GoToEnding()
+        {
+            CurrentState = GameState.Ending;
+            SceneManager.LoadScene(SCENE_ENDING);
+        }
+
         public void ModifyTrust(int amount)
         {
             TrustRating += amount;
