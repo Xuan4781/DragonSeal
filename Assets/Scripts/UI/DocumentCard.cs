@@ -35,15 +35,15 @@ namespace DragonSeal.UI
 
         public void LoadAsDocument(CitizenSO citizen)
         {
-            nameText.text = $"Name:         {citizen.documentName}";
-            ageText.text = $"Age:            {citizen.documentAge}";
-            classText.text = $"Class:          {citizen.documentClass}";
-            genderText.text = $"Gender:       {citizen.documentGender}";
-            regionText.text = $"Region:        {citizen.documentRegion}";
-            expiryText.text = $"Expires:        {citizen.documentExpiryDate}";
+            nameText.text = citizen.documentName;
+            ageText.text = citizen.documentAge.ToString();
+            classText.text = citizen.documentClass.ToString();
+            genderText.text = citizen.documentGender.ToString();
+            regionText.text = citizen.documentRegion.ToString();
+            expiryText.text = citizen.documentExpiryDate;
             appointmentText.text = citizen.documentHasAppointment
-                ? $"Appointment: {citizen.appointmentDate}"
-                : "Appointment: NONE";
+                ? citizen.appointmentDate
+                : "NONE";
 
             if (portraitImage != null)
             {
@@ -63,15 +63,13 @@ namespace DragonSeal.UI
 
         public void LoadAsDatabase(CitizenSO citizen)
         {
-            nameText.text = $"Name:         {citizen.citizenName}";
-            ageText.text = $"Age:            {citizen.age}";
-            classText.text = $"True Class:  {citizen.trueClass}";
-            genderText.text = $"Gender:       {citizen.trueGender}";
-            regionText.text = $"Region:        {citizen.trueRegion}";
-            expiryText.text = $"Expires:        {citizen.trueExpiryDate}";
-            appointmentText.text = citizen.isRegistered
-                ? "Status:         REGISTERED"
-                : "Status:         UNREGISTERED";
+            nameText.text = citizen.citizenName;
+            ageText.text = citizen.age.ToString();
+            classText.text = citizen.trueClass.ToString();
+            genderText.text = citizen.trueGender.ToString();
+            regionText.text = citizen.trueRegion.ToString();
+            expiryText.text = citizen.trueExpiryDate;
+            appointmentText.text = citizen.isRegistered ? "REGISTERED" : "UNREGISTERED";
 
             if (portraitImage != null)
             {
