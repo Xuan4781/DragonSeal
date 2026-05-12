@@ -2104,8 +2104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c08a673b8a05a34ab5e7be5d1954388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.UI.StampButton
-  normalColor: {r: 0.36078432, g: 0.101960786, b: 0.101960786, a: 0}
-  pressedColor: {r: 0.23529412, g: 0.039215688, b: 0.039215688, a: 0}
   pressOffset: 8
   decision: 1
 --- !u!1 &1107480170
@@ -2244,7 +2242,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107480170}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &1134951292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,7 +2516,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135706334}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &1200340345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,8 +3704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c08a673b8a05a34ab5e7be5d1954388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragonSeal.UI.StampButton
-  normalColor: {r: 0.101960786, g: 0.36078432, b: 0.101960786, a: 0}
-  pressedColor: {r: 0.039215688, g: 0.23529412, b: 0.039215688, a: 0}
   pressOffset: 8
   decision: 0
 --- !u!1 &1650153837
