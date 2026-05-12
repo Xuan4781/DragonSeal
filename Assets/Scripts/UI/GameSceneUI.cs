@@ -68,9 +68,6 @@ namespace DragonSeal.UI
             citizenDocumentCard.LoadAsDocument(citizen);
             governmentDatabaseCard.LoadAsDatabase(citizen);
 
-            citizenDocumentDraggable.ResetPosition();
-            governmentDatabaseDraggable.ResetPosition();
-
             warningText.text = "";
             UpdateDayAndTrust();
         }
